@@ -7,6 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'red': '#EF4523',
+        'primary-dark': '#2D2830',
+        'primary-light': '#EBE5C8',
+        'neon-pink': '#EF529C',
+        'soft-yellow': '#FFBD59',
+      },
+      fontFamily: {
+        montserrat: ['var(--font-montserrat)'],
+        kagitingan: ['var(--font-kagitingan)'],
+        yellowtail: ['var(--font-yellowtail)'],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
