@@ -1,4 +1,7 @@
+"use client"
+
 import ViewWrapper from "@/components/ViewWrapper";
+import { useState } from 'react';
 
 export default function StartView({ }) {
   return <>
@@ -15,7 +18,9 @@ function BigTittle({}) {
     </SubTittle>
     <Tittle>
       <TittleTag>
-        Pro
+        <NeonTextEffect>
+          Pro
+        </NeonTextEffect>
       </TittleTag>
       <EchoTextEffect>
         Software Engineer
@@ -54,4 +59,20 @@ function EchoTextEffect({children}){
       </span>
     </span>
   </>
+}
+
+function NeonTextEffect({ children }) {
+  const [flick, setFlick] = useState(true)
+
+  return (
+    <div
+      className={`
+        text-white
+        ${flick ? 'animate-flicker' : 'animate-pulsate-glow'}
+      `}
+      onAnimationEnd={() => setFlick(false)}
+    >
+      {children}
+    </div>
+  )
 }
