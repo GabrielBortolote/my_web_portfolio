@@ -1,3 +1,4 @@
+import './globals.css'
 import { Montserrat, Yellowtail } from 'next/font/google';
 import localFont from 'next/font/local'
 
@@ -21,14 +22,13 @@ const kagitingan = localFont({
   variable: '--font-kagitingan',
 })
 
-export default function RootLayout({ children }) {
+export default function RootLayout({children}) {
   return (
     <html
       lang='en'
       className={`${montserrat.variable} ${kagitingan.variable} ${yellowtail.variable}`}
     >
-      <body>
-        <h1>{'I\'m the general layout'}</h1>
+      <body className='font-montserrat'>
         {children}
       </body>
     </html>
