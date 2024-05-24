@@ -1,5 +1,5 @@
-import ViewWrapper from "@/components/ViewWrapper";
-import StartView from "@/components/StartView";
+import ViewWrapper from "@/components/views/ViewWrapper";
+import StartView from "@/components/views/StartView";
 
 
 export default function Page() {
