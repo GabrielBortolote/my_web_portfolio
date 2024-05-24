@@ -9,11 +9,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'red': '#EF4523',
-        'dark': '#2D2830',
-        'light': '#EBE5C8',
-        'neon-pink': neon_pink,
-        'soft-yellow': '#FFBD59',
+        red: '#EF4523',
+        dark: '#2D2830',
+        light: '#EBE5C8',
+        neonPink: neon_pink,
+        softYellow: '#FFBD59',
       },
       fontFamily: {
         montserrat: ['var(--font-montserrat)'],
