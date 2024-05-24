@@ -1,36 +1,15 @@
 "use client"
 
 import { useState } from 'react'
-import styled, { keyframes } from 'styled-components'
 import {insertDarkPoint, numbers2keyframes} from './Utils'
-
-const intenseGlowTextShadow = (color) => `
-  0px 0px 4px #fff,
-  0px 0px 11px #fff,
-  0px 0px 19px #fff,
-  0px 0px 40px ${color},
-  0px 0px 80px ${color},
-  0px 0px 90px ${color},
-  0px 0px 100px ${color},
-  0px 0px 150px ${color}
-`
-
-const glowTextShadow = (color) => `
-  0px 0px 2px #fff,
-  0px 0px 4px #fff,
-  0px 0px 6px #fff,
-  0px 0px 10px ${color},
-  0px 0px 45px ${color},
-  0px 0px 55px ${color},
-  0px 0px 70px ${color},
-  0px 0px 80px ${color}
-`
+import FlickTextAnimation from './FlickAnimation'
+import PulseGlowAnimation from './PulseAnimation'
 
 
 export default function NeonFlickAndPulseEffect({
   children,
   lightPoints=[10, 45, 50, 55, 75, 100, 101],
-  flickDuration=3,
+  flickAnimationDuration=3,
   neonColor='white',
 }){
   // filter invalid light points
@@ -43,50 +22,31 @@ export default function NeonFlickAndPulseEffect({
     insertDarkPoint(darkPoints, lightPoints, point+1)
   });
 
-  // create flick animation
-  const flickKeyFrames = keyframes`
-    ${numbers2keyframes(lightPoints)} {
-      text-shadow: ${intenseGlowTextShadow(neonColor)};
-    }
-    ${numbers2keyframes(darkPoints)} {
-      text-shadow: none;
-    }
-  `
-
-  // create pulse glow animation
-  const pulseGlowKeyFrames = keyframes`
-    0% {
-      text-shadow: ${intenseGlowTextShadow(neonColor)};
-    }
-    100% {
-      text-shadow: ${glowTextShadow(neonColor)};
-    }
-  `
-
-  const FlickText = styled.span`
-    animation: ${flickKeyFrames} ${flickDuration}s linear 1;
-  `
-
-  const PulseGlowText = styled.span`
-    animation: ${pulseGlowKeyFrames} 2s infinite alternate;
-  `
-
+  // create keyframes to the animation
+  const lightKeyframes = numbers2keyframes(lightPoints)
+  const darkKeyframes = numbers2keyframes(darkPoints)
+  
+  // render
   const [flick, setFlick] = useState(true)
   if (flick){
     return (
-      <FlickText
+      <FlickTextAnimation
         className='text-white'
+        $color={neonColor}
+        $lightFrames={lightKeyframes}
+        $darkFrames={darkKeyframes}
+        $duration={flickAnimationDuration}
         onAnimationEnd={() => setFlick(false)}
       >
         {children}
-      </FlickText>
+      </FlickTextAnimation>
     )
   }
   else {
     return (
-      <PulseGlowText className='text-white'>
+      <PulseGlowAnimation $color={neonColor} className='text-white'>
         {children}
-      </PulseGlowText>
+      </PulseGlowAnimation>
     )
   }
 }
