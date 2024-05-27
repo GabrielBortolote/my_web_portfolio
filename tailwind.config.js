@@ -20,6 +20,21 @@ module.exports = {
         kagitingan: ['var(--font-kagitingan)'],
         yellowtail: ['var(--font-yellowtail)'],
       },
+      keyframes: {
+        fadeInOut: {
+          '0%, 100%': {
+            opacity: '0',
+            transform: 'scale(0%)',
+          },
+          '50%': {
+            opacity: '1',
+            transform: 'scale(100%)',
+          }
+        }
+      },
+      animation: {
+        fadeInOut: 'fadeInOut 3s ease-in-out infinite',
+      }
     },
   },
   plugins: [],
