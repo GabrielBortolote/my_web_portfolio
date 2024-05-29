@@ -1,18 +1,23 @@
-import {gentRandomInt} from './Utils'
+import {getRandomInt} from './Utils'
 
-function SprinkleAtom ({children}) {
-  const top = gentRandomInt({max: 100})
-  const left = gentRandomInt({max: 100})
-  const delay = gentRandomInt(5, 40)
+function SprinkleAtom ({
+  children, minDelay=0, maxDelay=30, minDuration=10, maxDuration=15
+}) {
+  const top = getRandomInt(0, 100);
+  const left = getRandomInt(0, 100);
+  const delay = getRandomInt(minDelay, maxDelay);
+  const duration = getRandomInt(minDuration, maxDuration);
 
   return <div
-  className={'animate-fadeInOut'}
     style={{
       opacity: 0,
       position: 'absolute',
       top: `${top}%`,
       left: `${left}%`,
+      animation: `fadeInOut`,
       animationDelay: `${delay}s`,
+      animationDuration: `${duration}s`,
+      animationIterationCount: 'infinite',
     }}
   >
     {children}

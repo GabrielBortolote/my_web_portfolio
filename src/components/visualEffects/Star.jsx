@@ -1,5 +1,5 @@
 export default function Star () {
-  return <span className="text-light text-sm">
+  return <span className="text-light text-xs">
     ✯
   </span>
 } 

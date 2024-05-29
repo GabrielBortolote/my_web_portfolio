@@ -1,4 +1,4 @@
-export default function ASkyFullOfStars({color}) {
+export default function ASkyFullOfStars() {
   return <div className={`
     absolute
     w-full
@@ -6,7 +6,7 @@ export default function ASkyFullOfStars({color}) {
     left-0
     top-0
     bg-gradient-to-b
-    from-${color}
+    from-dark
     to-transparent
     z-10
   `}></div>
