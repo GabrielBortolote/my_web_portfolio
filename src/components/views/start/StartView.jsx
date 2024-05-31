@@ -1,19 +1,18 @@
 import { theme } from "@/../tailwind.config"
+import ASkyFullOfStars from "@/components/visualEffects/ASkyFullOfStars"
+import EchoTextEffect from "@/components/textEffects/Echo"
+import GradientLayer from "@/components/visualEffects/GradientLayer"
 import NeonFlickAndPulseEffect from "@/components/textEffects/neon/NeonFlickAndPulseEffect"
+import StartHorizonLines from "./StartHorizonLines"
 import SubTitle from "@/components/textEffects/SubTitle"
 import Title from "@/components/textEffects/Title"
 import TitleTag from "@/components/textEffects/TitleTag"
-import EchoTextEffect from "@/components/textEffects/Echo"
-import ASkyFullOfStars from "@/components/visualEffects/ASkyFullOfStars"
-import GradientLayer from "@/components/visualEffects/GradientLayer"
-import StartHorizonLines from "./StartHorizonLines"
 
 export default function StartView({ }) {
   return <div className={`
     w-full
     h-screen
     overflow-hidden
-    bg-dark
     text-light
     flex
     justify-center

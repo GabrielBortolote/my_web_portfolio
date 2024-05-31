@@ -1,6 +1,6 @@
 const lineShadowEffect = ({color}) => `
-  0px 0px 2px #fff,
-  0px 0px 24px ${color}
+  0px 0px 4px #ffffff,
+  0px 0px 10px ${color}
 `
 
 export function HorizontalLine({color, width, thickness, top, left}) {

@@ -1,5 +1,5 @@
 import {HorizontalLine, DiagonalLine} from "./Lines"
-import {degrees_to_radians} from "./Utils"
+import { degrees_to_radians } from "@/components/views/Utils";
 
 
 function makeHorizontalLines(numberOfLines) {

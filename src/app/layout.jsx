@@ -9,8 +9,8 @@ const montserrat = Montserrat({
   })
   
   const yellowtail = Yellowtail({
-    subsets: ['latin'],
     weight: '400',
+    subsets: ['latin'],
     style: 'normal',
     variable: '--font-yellowtail',
 })
@@ -28,7 +28,7 @@ export default function RootLayout({children}) {
       lang='en'
       className={`${montserrat.variable} ${kagitingan.variable} ${yellowtail.variable}`}
     >
-      <body className='font-montserrat'>
+      <body className='font-montserrat bg-dark'>
         {children}
       </body>
     </html>
