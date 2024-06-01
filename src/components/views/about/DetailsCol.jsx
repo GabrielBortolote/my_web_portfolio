@@ -1,10 +1,12 @@
 "use client"
 
 import { ReactFitty } from "react-fitty";
+import Curves from "@/components/visualEffects/Curves";
 
 export default function DetailsCol(){
   return <div
     className="
+      relative
       flex flex-col justify-end
       font-montserrat
       px-12 2xl:px-24
@@ -12,6 +14,8 @@ export default function DetailsCol(){
     "
     style={{flex: '1 1 50%'}}
   >
+    <Curves className='block md:hidden top-0'/>
+    <Curves className='block md:hidden origin-center top-96'/>
     <HighlightContainer/>
     <DescriptionContainer/>
     <DownloadCVButton/>
