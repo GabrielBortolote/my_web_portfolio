@@ -5,13 +5,15 @@ import ASkyFullOfStars from "@/components/visualEffects/ASkyFullOfStars"
 
 export default function AboutView(){
   return <div className={`
-  p-48
+  relative
+  py-24
   w-full
-  text-light
+  text-light font-montserrat
   flex
   flex-row
-  font-montserrat
-  relative
+  justify-center
+  flex-wrap
+  lg:flex-nowrap
   overflow-hidden
   `}>
     <ASkyFullOfStars granularity={1000}/>

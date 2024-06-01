@@ -5,7 +5,13 @@ export default function AboutCol(){
   const whatsAppLink = `https://wa.me/+5518996076736/?text=${encodeURI(whatsAppMessage)}`
   const age = getAge(4, 6, 1998)  // my birth date
 
-  return <div className="flex flex-row justify-end pr-12" style={{flex: '1 1 50%'}}>
+  return <div
+  style={{flex: '1 1 50%'}}
+    className="
+      flex flex-row
+      justify-center xl:justify-end 
+    "
+  >
     <PersonalInfoList personalInfo={[
       {title: 'name', data: 'Gabriel Bortolote'},
       {title: 'age', data: age},
@@ -28,7 +34,15 @@ export default function AboutCol(){
 }
 
 function PersonalInfoList({personalInfo}){
-  return <div className="w-[60%] bg-softYellow px-12 py-4 rounded text-dark relative">
+  return <div className="
+    relative
+    bg-softYellow rounded-2xl
+    px-8 md:px-12 py-4 
+    text-dark
+    w-3/4
+    min-w-[250px]
+    xl:min-w-[400px]
+  ">
     {personalInfo.map((item, index) => (
       <PersonalInfoItem key={index} title={item.title} data={item.data} link={item.link} />
     ))}
@@ -38,7 +52,7 @@ function PersonalInfoList({personalInfo}){
 
 function PersonalInfoItem({index, title, data, link}){
   return <div key={index} className="py-6 font-semibold">
-    <p className='font-extrabold tracking-widest text-xl'>
+    <p className='font-extrabold tracking-widest text-md md:text-xl'>
       {title.toUpperCase()}
     </p>
     <p className="text-lg mt-2" style={{textDecoration: link ? 'underline' : ''}}>
@@ -50,14 +64,15 @@ function PersonalInfoItem({index, title, data, link}){
 function SideCaption({children}){
   return <div
     className="
-      absolute w-[200%] top-12 right-[100%]
-      text-9xl font-yellowtail text-softYellow text-end
+      absolute w-[200%] top-4 xl:top-12 right-[100%]
+      text-4xl sm:text-7xl xl:text-9xl
+      font-yellowtail text-softYellow text-end
     "
     style={{
       transformOrigin: 'top right',
       transform: 'rotate(-90deg) translateY(-80%)',
     }}
-  >
+  > 
     {children}
   </div>
 }

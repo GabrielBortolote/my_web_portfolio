@@ -4,7 +4,12 @@ import { ReactFitty } from "react-fitty";
 
 export default function DetailsCol(){
   return <div
-    className="flex flex-col justify-end px-28 font-montserrat"
+    className="
+      flex flex-col justify-end
+      font-montserrat
+      px-12 2xl:px-24
+      pt-12 2xl:pt-24
+    "
     style={{flex: '1 1 50%'}}
   >
     <HighlightContainer/>
@@ -14,7 +19,7 @@ export default function DetailsCol(){
 }
 
 function HighlightContainer() {
-  return <div className="flex flex-row flex-wrap py-24">
+  return <div className="flex flex-row flex-wrap pb-12 md:pb-24 justify-evenly">
     <Highlight title="xp years" content="6+"/>
     <Highlight title="english" content="fluent"/>
     <Highlight title="projects" content="20+"/>
@@ -26,7 +31,7 @@ function Highlight({title, content}) {
   if(!Array.isArray(content)) {
     content = [content]
   }
-  return <div className="font-bold w-2/4">
+  return <div className="font-bold md:w-2/4 p-4 md:p-0">
     <span className="text-2xl tracking-widest">   
       {title.toUpperCase()}
     </span>

@@ -22,15 +22,15 @@ export default function StartView({ }) {
     flex flex-row justify-center
     relative
   `}>
-    <div className="flex flex-col">
-      <div className="relative top-1/3 text-center">
+    <div className="flex flex-col justify-end">
+      <div className="relative bottom-2/4 text-center">
         <h3 className="font-bold text-2xl md:text-4xl">
           Gabriel Bortolote
         </h3>
         <div className="
           relative
           pt-1 md:pt-2
-          font-kagitingan text-6xl md:text-8xl uppercase text-softYellow
+          font-kagitingan text-6xl sm:text-8xl uppercase text-softYellow
         ">
           <EchoTextEffect color='#fd6155' tag={titleTag}>
             Software <br className="min-[1150px]:hidden"/> Engineer
