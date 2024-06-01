@@ -31,8 +31,8 @@ function Highlight({title, content}) {
   if(!Array.isArray(content)) {
     content = [content]
   }
-  return <div className="font-bold md:w-2/4 p-4 md:p-0">
-    <span className="text-2xl tracking-widest">   
+  return <div className="font-bold w-2/4 p-4 md:p-0">
+    <span className="text-lg sm:text-2xl tracking-widest">   
       {title.toUpperCase()}
     </span>
     {content.map((item, index) => (
