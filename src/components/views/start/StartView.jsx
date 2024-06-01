@@ -4,36 +4,39 @@ import EchoTextEffect from "@/components/textEffects/Echo"
 import GradientLayer from "@/components/visualEffects/GradientLayer"
 import NeonFlickAndPulseEffect from "@/components/textEffects/neon/NeonFlickAndPulseEffect"
 import StartHorizonLines from "./StartHorizonLines"
-import SubTitle from "@/components/textEffects/SubTitle"
-import Title from "@/components/textEffects/Title"
 import TitleTag from "@/components/textEffects/TitleTag"
 
 export default function StartView({ }) {
+  const titleTag = <TitleTag>
+    <NeonFlickAndPulseEffect neonColor={theme.extend.colors.neonPink}>
+      Pro
+    </NeonFlickAndPulseEffect>
+  </TitleTag>
+
+
   return <div className={`
     w-full
     h-screen
     overflow-hidden
     text-light
-    flex
-    justify-center
+    flex flex-row justify-center
     relative
   `}>
-    <ASkyFullOfStars />
-    <GradientLayer />
-    <div className='text-center z-20 relative top-[33%]'>
-      <SubTitle>
-        Gabriel Bortolote
-      </SubTitle>
-      <Title>
-        <TitleTag>
-          <NeonFlickAndPulseEffect neonColor={theme.extend.colors.neonPink}>
-            Pro
-          </NeonFlickAndPulseEffect>
-        </TitleTag>
-        <EchoTextEffect color='#fd6155'>
-          Software Engineer
-        </EchoTextEffect>
-      </Title>
+    <div className="flex flex-col">
+      <div className="relative top-1/3 text-center">
+        <h3 className="font-bold text-2xl md:text-4xl">
+          Gabriel Bortolote
+        </h3>
+        <div className="
+          relative
+          pt-1 md:pt-2
+          font-kagitingan text-6xl md:text-8xl uppercase text-softYellow
+        ">
+          <EchoTextEffect color='#fd6155' tag={titleTag}>
+            Software <br className="min-[1150px]:hidden"/> Engineer
+          </EchoTextEffect>
+        </div>
+      </div>
     </div>
     <StartHorizonLines
       thickness={2}
@@ -41,5 +44,7 @@ export default function StartView({ }) {
       numberOfDiagonalLines={15}
       color={theme.extend.colors.neonPink}
     />
+    <ASkyFullOfStars />
+    <GradientLayer />
   </div>
 }

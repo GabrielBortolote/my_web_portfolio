@@ -8,6 +8,6 @@ export default function ASkyFullOfStars() {
     bg-gradient-to-b
     from-dark
     to-transparent
-    z-10
+    -z-40
   `}></div>
 }

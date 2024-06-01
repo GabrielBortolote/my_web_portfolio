@@ -1,19 +1,18 @@
-export default function EchoTextEffect({children, color}){
-  return <>
-    <span className="relative w-full z-0">
+export default function EchoTextEffect({children, color, tag}){
+  return <span className="relative">
+    {tag}
+    {children}
+    <span
+      className={`absolute top-0 left-0 opacity-50 translate-x-1 translate-y-1 -z-10`}
+      style={{color: color}}
+    >
       {children}
-      <span className={`absolute left-1 top-1 w-full -z-10`} style={{
-        color: color,
-        opacity: '50%',
-      }}>
-        {children}
-      </span>
-      <span className={`absolute left-2 top-2 w-full -z-20`} style={{
-        color: color,
-        opacity: '25%',
-      }}>
-        {children}
-      </span>
     </span>
-  </>
+    <span
+      className={`absolute top-0 left-0 opacity-25 translate-x-2 translate-y-2 -z-10`}
+      style={{color: color}}
+    >
+      {children}
+    </span>
+  </span>
 }
