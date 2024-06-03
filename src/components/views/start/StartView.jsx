@@ -6,13 +6,12 @@ import NeonFlickAndPulseEffect from "@/components/textEffects/neon/NeonFlickAndP
 import StartHorizonLines from "./StartHorizonLines"
 import TitleTag from "@/components/textEffects/TitleTag"
 
-export default function StartView({ }) {
+export default function StartView({dict}) {
   const titleTag = <TitleTag>
     <NeonFlickAndPulseEffect neonColor={theme.extend.colors.neonPink}>
       Pro
     </NeonFlickAndPulseEffect>
   </TitleTag>
-
 
   return <div className={`
     w-full
@@ -33,7 +32,7 @@ export default function StartView({ }) {
           font-kagitingan text-6xl sm:text-8xl uppercase text-softYellow
         ">
           <EchoTextEffect color='#fd6155' tag={titleTag}>
-            Software <br className="min-[1150px]:hidden"/> Engineer
+            {dict.roleStart} <br className="min-[1150px]:hidden"/> {dict.roleEnd}
           </EchoTextEffect>
         </div>
       </div>

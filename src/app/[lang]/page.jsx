@@ -1,14 +1,17 @@
 import AboutView from "@/components/views/about/AboutView";
 import StartView from "@/components/views/start/StartView";
+import { getDictionary } from '@/app/dictionaries'
 
 export const metadata = {
   title: 'Gabriel B',
   description: 'Gabriel Bortolote Web Place',
 }
 
-export default function Page() {
+
+export default async function Page({ params: { lang } }) {
+  const dict = await getDictionary(lang)
   return <>
-    <StartView />
-    <AboutView/>
+    <StartView dict={dict}/>
+    <AboutView dict={dict}/>
   </>
 }
