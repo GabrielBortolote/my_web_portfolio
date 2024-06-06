@@ -3,7 +3,7 @@
 import { ReactFitty } from "react-fitty";
 import Curves from "@/components/visualEffects/Curves";
 
-export default function DetailsCol(){
+export default function DetailsCol({dict, lang}){
   return <div
     className="
       relative
@@ -16,18 +16,21 @@ export default function DetailsCol(){
   >
     <Curves className='block md:hidden top-0'/>
     <Curves className='block md:hidden origin-center top-96'/>
-    <HighlightContainer/>
-    <DescriptionContainer/>
-    <DownloadCVButton/>
+    <HighlightContainer dict={dict}/>
+    <DescriptionContainer dict={dict}/>
+    <DownloadCVButton text={dict.downloadCV} lang={lang}/>
   </div>
 }
 
-function HighlightContainer() {
+function HighlightContainer({dict}) {
   return <div className="flex flex-row flex-wrap pb-12 md:pb-24 justify-evenly">
-    <Highlight title="xp years" content="6+"/>
-    <Highlight title="english" content="fluent"/>
-    <Highlight title="projects" content="20+"/>
-    <Highlight title="degree" content={["computer", "science"]}/>
+    <Highlight title={dict.xp} content="6+"/>
+    <Highlight title={dict.englishLevelTitle} content={dict.englishLevelValue}/>
+    <Highlight title={dict.projects} content="20+"/>
+    <Highlight
+      title={dict.degreeTitle}
+      content={[dict.degreeFirstValue, dict.degreeSecondValue]}
+    />
   </div>
 }
 
@@ -53,35 +56,35 @@ function Highlight({title, content}) {
   </div>
 }
 
-function DescriptionContainer(){
+function DescriptionContainer({dict}){
   return <div className="text-lg font-semibold">
     <h4
       className="text-softYellow font-kagitingan text-3xl w-full text-center"
     >
       <ReactFitty>
-        Bring your ideas to life
+        {dict.description.title}
       </ReactFitty>
     </h4>
     <p className="py-8">
-      Software can be tricky when you do not have a dedicated partner to deliver it. Usually, IT professionals can not understand the partner{"\'"}s needs, leading them to implement poor and suboptimal solutions. 
+      {dict.description.paragraphs[0]}
     </p>
     <p className="pb-8">
-      I use strong communication skills to understand the partner{"\'"}s needs and apply all my expertise in engineering IT projects to build the best solution possible.
+      {dict.description.paragraphs[1]}
     </p>
     <p className="pb-8">
-      I have a complete and extensive CV, check it out yourself:
+      {dict.description.paragraphs[2]}
     </p>
   </div>
 }
 
-function DownloadCVButton(){
-  return <a href={'/CV.pdf'}>
+function DownloadCVButton({text, lang}){
+  return <a href={`/CV-${lang}.pdf`}>
     <button className="
       bg-softYellow rounded w-full text-center p-4
       text-4xl font-kagitingan text-bold text-dark
       cursor-default`
     ">
-      Download CV
+      {text}
     </button>
   </a>
 }

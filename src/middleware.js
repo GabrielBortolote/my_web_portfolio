@@ -3,7 +3,7 @@ import { match } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
  
 const defaultLocale = 'en'
-const locales = [defaultLocale, 'pt']
+const locales = [defaultLocale, 'pt-BR']
 
 export function middleware(request) {
   // Check if there is any supported locale in the pathname
@@ -11,7 +11,9 @@ export function middleware(request) {
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   )
-  if (pathnameHasLocale) return
+  if (pathnameHasLocale){
+    return
+  }
  
   // Redirect if there is no locale
   const locale = getLocale(request)
@@ -22,7 +24,7 @@ export function middleware(request) {
 export const config = {
   matcher: [
     // Skip all internal paths (_next)
-    '/((?!_next/static|_next/image|favicon.ico|CV.pdf).*)',
+    '/((?!_next/static|_next/image|favicon.ico|CV).*)',
   ] 
 }
 

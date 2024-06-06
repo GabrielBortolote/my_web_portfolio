@@ -1,6 +1,6 @@
 import { getAge } from "@/components/views/Utils";
 
-export default function AboutCol(){
+export default function AboutCol({dict}){
   const whatsAppMessage = 'Hello! I found your web site and I\'m interested on your services. Let\'s talk?'
   const whatsAppLink = `https://wa.me/+5518996076736/?text=${encodeURI(whatsAppMessage)}`
   const age = getAge(4, 6, 1998)  // my birth date
@@ -12,28 +12,31 @@ export default function AboutCol(){
       justify-center xl:justify-end 
     "
   >
-    <PersonalInfoList personalInfo={[
-      {title: 'name', data: 'Gabriel Bortolote'},
-      {title: 'age', data: age},
-      {title: 'role', data: 'Full Stack Engineer'},
-      {title: 'email', data: 'gbortolote@gmail.com'},
-      {
-        title: 'phone',
-        data: '+55 18 99607-6736',
-        link: whatsAppLink
-      },
-      {title: 'location', data: 'Brazil'},
-      {title: 'hobbies', data: 'Code, Coffee Shop, Gym'},
-      {
-        title: 'linkedin',
-        data: 'GabrielBortolote',
-        link: 'https://www.linkedin.com/in/gabriel-bortolote/'
-      },
-    ]}/>
+    <PersonalInfoList
+      personalInfo={[
+        {title: dict.nameTitle, data: 'Gabriel Bortolote'},
+        {title: dict.ageTitle, data: age},
+        {title: dict.roleTitle, data: dict.roleValue},
+        {title: dict.emailTitle, data: 'gbortolote@gmail.com'},
+        {
+          title: dict.phoneTitle,
+          data: '+55 18 99607-6736',
+          link: whatsAppLink
+        },
+        {title: dict.locationTitle, data: dict.locationValue},
+        {title: dict.hobbiesTitle, data: dict.hobbiesValue},
+        {
+          title: 'linkedin',
+          data: 'GabrielBortolote',
+          link: 'https://www.linkedin.com/in/gabriel-bortolote/'
+        },
+      ]}
+      dict={dict}
+    />
   </div>
 }
 
-function PersonalInfoList({personalInfo}){
+function PersonalInfoList({personalInfo, dict}){
   return <div className="
     relative
     bg-softYellow rounded-2xl
@@ -46,7 +49,7 @@ function PersonalInfoList({personalInfo}){
     {personalInfo.map((item, index) => (
       <PersonalInfoItem key={index} title={item.title} data={item.data} link={item.link} />
     ))}
-    <SideCaption>About</SideCaption>
+    <SideCaption>{dict.about}</SideCaption>
   </div>
 }
 

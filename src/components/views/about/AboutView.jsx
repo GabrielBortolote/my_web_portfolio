@@ -3,7 +3,7 @@ import Curves from "@/components/visualEffects/Curves"
 import DetailsCol from "./DetailsCol"
 import ASkyFullOfStars from "@/components/visualEffects/ASkyFullOfStars"
 
-export default function AboutView(){
+export default function AboutView({dict, lang}){
   return <div className={`
   relative
   py-24
@@ -18,8 +18,8 @@ export default function AboutView(){
   `}>
     <Curves className='hidden md:block'/>
     <ASkyFullOfStars granularity={1000}/>
-    <AboutCol />
-    <DetailsCol />
+    <AboutCol dict={dict}/>
+    <DetailsCol dict={dict} lang={lang} />
   </div>
 }
 

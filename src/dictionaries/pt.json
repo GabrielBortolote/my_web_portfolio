@@ -1,4 +1,31 @@
 {
-  "roleStart": "Engenheiro de",
-  "roleEnd": "Software"
+  "roleStart": "Software",
+  "roleEnd": "Engineer",
+  "about": "Sobre mim",
+  "roleValue": "Engenheiro Full Stack",
+  "nameTitle": "nome",
+  "ageTitle": "idade",
+  "roleTitle": "cargo",
+  "emailTitle": "email",
+  "phoneTitle": "telefone",
+  "locationTitle": "localização",
+  "hobbiesTitle": "hobbies",
+  "locationValue": "Brasil",
+  "hobbiesValue": "Code, Coffee Shop, Gym",
+  "xp": "xp years",
+  "englishLevelTitle": "inglês",
+  "englishLevelValue": "fluente",
+  "projects": "projetos",
+  "degreeTitle": "graduação",
+  "degreeFirstValue": "ciencias da",
+  "degreeSecondValue": "computação",
+  "description": {
+    "title": "Tire as suas ideias do papel",
+    "paragraphs": [
+      "Software pode ser complicado quando você não possui um parceiro dedicado para desenvolvê-lo para você. A maioria dos profissionais de TI não entendem verdadeiramente o problema antes de implementar a solução, entregando soluções sub-ótimas",
+      "Eu uso uma abordagem focada no problema do cliente. Usando uma comunicação intensiva, eu primeiro entendo qual é o problema a ser resolvido, para sempre entregar a melhor solução possível.",
+      "Possuo um currículo completo e extenso, confira você mesmo:"
+    ]
+  },
+  "downloadCV": "Baixar Currículo"
 }

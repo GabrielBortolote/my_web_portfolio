@@ -1,4 +1,31 @@
 {
   "roleStart": "Software",
-  "roleEnd": "Engineer"
+  "roleEnd": "Engineer",
+  "about": "About",
+  "roleValue": "Full Stack Engineer",
+  "nameTitle": "name",
+  "ageTitle": "age",
+  "roleTitle": "role",
+  "emailTitle": "email",
+  "phoneTitle": "phone",
+  "locationTitle": "location",
+  "hobbiesTitle": "hobbies",
+  "locationValue": "Brazil",
+  "hobbiesValue": "Code, Coffee Shop, Gym",
+  "xp": "xp years",
+  "englishLevelTitle": "english",
+  "englishLevelValue": "fluent",
+  "projects": "projects",
+  "degreeTitle": "degree",
+  "degreeFirstValue": "computer",
+  "degreeSecondValue": "science",
+  "description": {
+    "title": "Bring your ideas to life",
+    "paragraphs": [
+      "Software can be tricky when you do not have a dedicated partner to deliver it. Usually, IT professionals can not understand the partner's needs, leading them to implement poor and suboptimal solutions.",
+      "I use strong communication skills to understand the partner's needs and apply all my expertise in engineering IT projects to build the best solution possible.",
+      "I have a complete and extensive CV, check it out yourself:"
+    ]
+  },
+  "downloadCV": "Download CV"
 }
