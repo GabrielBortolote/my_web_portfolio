@@ -23,8 +23,8 @@ export default function StartView({dict}) {
   `}>
     <div className="flex flex-col justify-end">
       <div className="relative bottom-2/4 text-center">
-        <h3 className="font-bold text-2xl md:text-4xl">
-          Gabriel Bortolote
+        <h3 className="tracking-widest text-2xl md:text-4xl">
+          GABRIEL BORTOLOTE
         </h3>
         <div className="
           relative
