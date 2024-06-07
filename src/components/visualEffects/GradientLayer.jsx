@@ -8,5 +8,6 @@ export default function GradientLayer() {
     bg-gradient-to-b
     from-dark
     to-transparent
+    -z-10
   `}></div>
 }
