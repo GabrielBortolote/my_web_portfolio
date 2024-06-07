@@ -21,6 +21,7 @@ export default function StartView({dict}) {
     flex flex-row justify-center
     relative
   `}>
+    <GradientLayer />
     <div className="flex flex-col justify-end">
       <div className="relative bottom-2/4 text-center">
         <h3 className="tracking-widest text-2xl md:text-4xl">
@@ -44,6 +45,5 @@ export default function StartView({dict}) {
       color={theme.extend.colors.neonPink}
     />
     <ASkyFullOfStars />
-    <GradientLayer />
   </div>
 }

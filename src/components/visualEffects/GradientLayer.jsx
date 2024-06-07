@@ -1,4 +1,4 @@
-export default function ASkyFullOfStars() {
+export default function GradientLayer() {
   return <div className={`
     absolute
     w-full
@@ -8,6 +8,5 @@ export default function ASkyFullOfStars() {
     bg-gradient-to-b
     from-dark
     to-transparent
-    -z-40
   `}></div>
 }
