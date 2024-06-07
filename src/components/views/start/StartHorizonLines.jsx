@@ -67,6 +67,12 @@ export default function StartHorizonLines({
       }}
     >
 
+      <div className="
+        w-full h-full
+        bg-gradient-to-t from-neonPink to-transparent
+        opacity-50
+      "></div>
+
       {horizontalLines.map(({key, top}) => (
         <HorizontalLine
           key={key}

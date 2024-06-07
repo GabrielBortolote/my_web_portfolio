@@ -1,5 +1,5 @@
 const lineShadowEffect = ({color}) => `
-  0px 0px 4px #ffffff,
+  0px 0px 1px #ffffff,
   0px 0px 10px ${color}
 `
 
