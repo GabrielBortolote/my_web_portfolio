@@ -24,16 +24,21 @@ export default function StartView({dict}) {
     <GradientLayer />
     <div className="flex flex-col justify-end">
       <div className="relative bottom-2/4 text-center">
-        <h3 className="tracking-widest text-2xl md:text-4xl">
+        <h3 className="
+          tracking-widest
+          text-lg sm:text-2xl lg:text-4xl
+        ">
           GABRIEL BORTOLOTE
         </h3>
         <div className="
           relative
           pt-1 md:pt-2
-          font-kagitingan text-6xl sm:text-8xl uppercase text-softYellow
+          font-kagitingan
+          text-6xl sm:text-8xl
+          uppercase text-softYellow
         ">
           <EchoTextEffect color='#fd6155' tag={titleTag}>
-            {dict.roleStart} <br className="min-[1150px]:hidden"/> {dict.roleEnd}
+            {dict.roleStart} <br className="lg:hidden"/> {dict.roleEnd}
           </EchoTextEffect>
         </div>
       </div>
