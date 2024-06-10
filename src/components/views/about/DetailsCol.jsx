@@ -5,10 +5,9 @@ export default function DetailsCol({dict, lang}){
   return <div
     className="
       relative
-      flex flex-col justify-end
+      flex flex-col justify-start
       items-center lg:items-stretch
       font-montserrat
-      pt-12
       px-12 xs:px-24 sm:px-48
       lg:pl-0 2xl:pl-24
       lg:pr-12 xl:pr-[8%] 2xl:pr-[20%]
