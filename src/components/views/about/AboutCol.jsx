@@ -10,7 +10,7 @@ export default function AboutCol({dict}){
     className="
       flex flex-row
       justify-center 2xl:justify-end
-      px-0 sm:px-24 lg:px-0
+      xs:px-12 md:px-24 lg:px-0
     "
   >
     <PersonalInfoList
@@ -54,10 +54,13 @@ function PersonalInfoList({personalInfo, dict}){
 
 function PersonalInfoItem({index, title, data, link}){
   return <div key={index} className="py-6 font-semibold">
-    <p className='font-extrabold tracking-widest text-md md:text-xl'>
+    <p className='
+      font-extrabold tracking-widest
+      text-sm xs:text-lg md:text-xl
+    '>
       {title.toUpperCase()}
     </p>
-    <p className="text-lg mt-2" style={{textDecoration: link ? 'underline' : ''}}>
+    <p className="text-sm xs:text-lg mt-2" style={{textDecoration: link ? 'underline' : ''}}>
       {link ? <a href={link}>{data}</a> : data}
     </p>
   </div>

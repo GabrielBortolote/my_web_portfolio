@@ -26,7 +26,7 @@ export default function StartView({dict}) {
       <div className="relative bottom-2/4 text-center">
         <h3 className="
           tracking-widest
-          text-lg sm:text-2xl lg:text-4xl
+          text-sm xs:text-lg sm:text-2xl lg:text-4xl
         ">
           GABRIEL BORTOLOTE
         </h3>
@@ -34,11 +34,11 @@ export default function StartView({dict}) {
           relative
           pt-1 md:pt-2
           font-kagitingan
-          text-6xl sm:text-8xl
+          text-4xl xs:text-6xl sm:text-8xl
           uppercase text-softYellow
         ">
           <EchoTextEffect color='#fd6155' tag={titleTag}>
-            {dict.roleStart} <br className="lg:hidden"/> {dict.roleEnd}
+            {dict.roleStart} <br className="block lg:hidden"/> {dict.roleEnd}
           </EchoTextEffect>
         </div>
       </div>

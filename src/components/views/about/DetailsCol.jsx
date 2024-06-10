@@ -9,7 +9,7 @@ export default function DetailsCol({dict, lang}){
       items-center lg:items-stretch
       font-montserrat
       pt-12
-      px-48
+      px-12 xs:px-24 sm:px-48
       lg:pl-0 2xl:pl-24
       lg:pr-12 xl:pr-[8%] 2xl:pr-[20%]
     "
@@ -25,19 +25,24 @@ export default function DetailsCol({dict, lang}){
 
 
 function Description({dict}){
-  return <div className="text-lg font-semibold pt-20">
+  return <div className="
+    text-md xs:text-lg
+    font-semibold
+    pt-6 sm:pt-20
+
+  ">
     <h4 className="
       w-full
       text-center
       text-softYellow font-kagitingan
-      text-2xl sm:text-4xl
+      text-xl xs:text-2xl sm:text-4xl
     ">
       {dict.description.title}
     </h4>
-    <p className="py-8">
+    <p className="py-4 xs:py-8">
       {dict.description.paragraphs[0]}
     </p>
-    <p className="pb-8">
+    <p className="pb-4 xs:pb-8">
       {dict.description.paragraphs[1]}
     </p>
     <p className="pb-8">
@@ -50,7 +55,7 @@ function DownloadCVButton({text, lang}){
   return <a href={`/CV-${lang}.pdf`} className="self-stretch">
     <button className="
       bg-softYellow rounded w-full text-center p-4
-      text-4xl font-kagitingan text-bold text-dark
+      text-2xl xs:text-4xl font-kagitingan text-bold text-dark
       cursor-default`
     ">
       {text}

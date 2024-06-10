@@ -1,11 +1,14 @@
 export default function Highlights({dict}) {
-  return <div className="flex flex-row">
+  return <div className="
+    flex flex-row flex-wrap xs:flex-nowrap
+    justify-center sm:justify-start
+  ">
     <Col>
       <Item>
         <Title>
           {dict.xp.toUpperCase()}
         </Title>
-        <Content className="text-6xl sm:text-8xl">
+        <Content className="text-8xl xs:text-6xl sm:text-8xl">
           {"6+"}
         </Content>
       </Item>
@@ -13,7 +16,7 @@ export default function Highlights({dict}) {
         <Title>
           {dict.projects.toUpperCase()}
         </Title>
-        <Content className="text-6xl sm:text-8xl">
+        <Content className="text-8xl xs:text-6xl sm:text-8xl">
           {"20+"}
         </Content>
       </Item> 
@@ -23,7 +26,7 @@ export default function Highlights({dict}) {
         <Title>
           {dict.englishLevelTitle.toUpperCase()}
         </Title>
-        <Content className="text-4xl sm:text-5xl">
+        <Content className="text-5xl xs:text-4xl sm:text-5xl">
           {dict.englishLevelValue.toUpperCase()}
         </Content>
       </Item> 
@@ -31,11 +34,9 @@ export default function Highlights({dict}) {
         <Title>
           {dict.degreeTitle.toUpperCase()}
         </Title>
-        <Content className="text-2xl sm:text-4xl">
+        <Content className="text-4xl xs:text-2xl sm:text-4xl">
           {dict.degreeValue[0].toUpperCase()} <br/>
-          <span className="text-3xl sm:text-5xl">
             {dict.degreeValue[1].toUpperCase()}
-          </span>
         </Content>
       </Item>
     </Col>
@@ -43,7 +44,7 @@ export default function Highlights({dict}) {
 }
 
 function Col({children}) {
-  return <div className={`flex flex-col justify-between first:pr-12`}>
+  return <div className={`flex flex-col justify-between pr-0 xs:first:pr-12`}>
     {children}
   </div>
 }
@@ -53,13 +54,14 @@ function Item({children}) {
     font-bold
     h-2/4
     pb-16
+    text-center xs:text-left
   ">
     {children}
   </div>
 }
 
 function Title({children, className}){
-  return <span className={`text-lg sm:text-2xl tracking-widest ${className}`}>   
+  return <span className={`text-3xl xs:text-lg sm:text-2xl tracking-widest ${className}`}>   
     {children}
   </span>
 }

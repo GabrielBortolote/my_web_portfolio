@@ -11,6 +11,9 @@ module.exports = {
       widest: '.25em'
     },
     extend: {
+      screens: {
+        xs: '500px'
+      },
       colors: {
         red: '#EF4523',
         dark: '#2D2830',
