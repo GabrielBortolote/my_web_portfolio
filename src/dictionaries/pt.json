@@ -17,8 +17,7 @@
   "englishLevelValue": "fluente",
   "projects": "projetos",
   "degreeTitle": "graduação",
-  "degreeFirstValue": "ciencias da",
-  "degreeSecondValue": "computação",
+  "degreeValue": ["ciências da", "computação"],
   "description": {
     "title": "Tire as suas ideias do papel",
     "paragraphs": [

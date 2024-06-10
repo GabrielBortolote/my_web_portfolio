@@ -9,7 +9,8 @@ export default function AboutCol({dict}){
   style={{flex: '1 1 50%'}}
     className="
       flex flex-row
-      justify-center xl:justify-end 
+      justify-center 2xl:justify-end
+      px-0 sm:px-24 lg:px-0
     "
   >
     <PersonalInfoList
@@ -42,9 +43,7 @@ function PersonalInfoList({personalInfo, dict}){
     bg-softYellow rounded-2xl
     px-8 md:px-12 py-4 
     text-dark
-    w-3/4
-    min-w-[250px]
-    xl:min-w-[400px]
+    w-3/4 xl:w-2/4
   ">
     {personalInfo.map((item, index) => (
       <PersonalInfoItem key={index} title={item.title} data={item.data} link={item.link} />
@@ -68,7 +67,7 @@ function SideCaption({children}){
   return <div
     className="
       absolute w-[200%] top-4 xl:top-12 right-[100%]
-      text-4xl sm:text-7xl xl:text-9xl
+      text-4xl sm:text-7xl 2xl:text-9xl
       font-yellowtail text-softYellow text-end
     "
     style={{

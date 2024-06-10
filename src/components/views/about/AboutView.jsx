@@ -1,7 +1,6 @@
 import AboutCol from "./AboutCol"
 import Curves from "@/components/visualEffects/Curves"
 import DetailsCol from "./DetailsCol"
-import ASkyFullOfStars from "@/components/visualEffects/ASkyFullOfStars"
 
 export default function AboutView({dict, lang}){
   return <div className={`
@@ -17,7 +16,6 @@ export default function AboutView({dict, lang}){
   overflow-hidden
   `}>
     <Curves className='hidden md:block'/>
-    <ASkyFullOfStars granularity={1000}/>
     <AboutCol dict={dict}/>
     <DetailsCol dict={dict} lang={lang} />
   </div>

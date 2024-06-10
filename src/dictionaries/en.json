@@ -17,8 +17,7 @@
   "englishLevelValue": "fluent",
   "projects": "projects",
   "degreeTitle": "degree",
-  "degreeFirstValue": "computer",
-  "degreeSecondValue": "science",
+  "degreeValue": ["computer", "science"],
   "description": {
     "title": "Bring your ideas to life",
     "paragraphs": [
