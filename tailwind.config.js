@@ -7,10 +7,10 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    letterSpacing:{
-      widest: '.25em'
-    },
     extend: {
+      letterSpacing:{
+        widest: '.25em'
+      },
       screens: {
         xs: '500px'
       },

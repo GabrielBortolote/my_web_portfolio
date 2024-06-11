@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from 'react'
 import Image from 'next/image'
 import ModernBankApp from '@/static/ModernBankApp.svg'
 import DataPipeline from '@/static/DataPipeline.svg'
@@ -31,57 +34,83 @@ export default function Portfolio({dict}){
       image: TicTacToeImage,
       link: 'https://github.com/GabrielBortolote/Tic-Tac-Toe',
     }
-  ]
+  ];
+
+  const [selected, setSelected] = useState(0);
 
   return <div className="">
     <div className='
-      font-yellowtail text-8xl text-center
+      font-yellowtail text-8xl text-right
       pb-16
     '>
       {dict.whatIveDone}
     </div>
-    {items.map((item, count) => (
-      <Item key={count}>
-        <div className="
-          flex flex-col
-          justify-center items-end
-          pr-8
-          pb-8
-          w-2/4
-        ">
-          <Title>
-            {item.title}
-          </Title>
-          <Description>
-            {item.description}
-          </Description>
-          <Link url={item.link}>
-            {dict.preview}
-          </Link>
-        </div>
-        <Preview src={item.image} alt={item.title} />
-      </Item>
+    {items.map((item, index) => (
+      <Item
+        key={index}
+        isSelected={index==selected}
+        onClick={() => {
+          setSelected(index)
+        }}
+        dict={dict}
+        title={item.title}
+        description={item.description}
+        link={item.link}
+        image={item.image}
+      />
     ))}
   </div>
 }
 
-function Item({children}){
-  return <div className="
-    flex flex-row
-    justify-end
-    pb-16
-  ">
-    {children}
-  </div>
+function Item({dict, isSelected, onClick, title, description, link, image}){
+  if(isSelected){
+    return <div className="
+      flex flex-row
+      justify-end
+      pb-16
+    ">
+      <div className="
+        flex flex-col
+        justify-center items-end
+        pr-8
+        pb-8
+        w-2/4
+      ">
+        <Title className="tracking-wider">
+          {title}
+        </Title>
+        <Description>
+          {description}
+        </Description>
+        <Link url={link}>
+          {dict.preview}
+        </Link>
+      </div>
+      <Preview src={image} alt={title} />
+    </div>
+  }
+  else{
+    return <div onClick={onClick} className="
+      flex flex-row
+      justify-end
+      pb-16
+      cursor-pointer
+    ">
+      <Title className="tracking-widest">
+        {title}
+      </Title>
+    </div>
+  }
 }
 
-function Title({children}){
-  return <h3 className="
+function Title({children, className}){
+  return <h3 className={`
     text-2xl
     font-bold
     pb-4
     text-right
-  ">
+    ${className}
+  `}>
     {children}
   </h3>
 }
