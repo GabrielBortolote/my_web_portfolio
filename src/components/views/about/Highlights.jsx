@@ -2,6 +2,7 @@ export default function Highlights({dict}) {
   return <div className="
     flex flex-row flex-wrap xs:flex-nowrap
     justify-center sm:justify-start
+    pt-12 lg:pt-0
   ">
     <Col>
       <Item>

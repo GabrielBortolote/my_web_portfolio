@@ -26,5 +26,24 @@
       "Possuo um currículo completo e extenso, confira você mesmo:"
     ]
   },
-  "downloadCV": "Baixar Currículo"
-}
+  "downloadCV": "Baixar Currículo",
+  "whatIveDone": "Meus projetos",
+  "portfolioItems": {
+    "bankApp": {
+      "title": "Aplicativo Bancário Moderno",
+      "description": "Um design moderno e elegante de aplicativo bancário construído usando ReactJS."
+    },
+    "dataPipeline": {
+      "title": "Pipeline de Dados",
+      "description": "Manipulação de dados de várias fontes e produção de análises gráficas usando Python."
+    },
+    "mensClothesShop": {
+      "title": "Abisai",
+      "description": "Um design sofisticado criado para uma loja de roupas masculinas."
+    },
+    "ticTacToe": {
+      "title": "Jogo da Velha",
+      "description": "Um jogo simples e divertido construído usando ReactJS."
+    }
+  },
+  "preview": "Visualizar"}

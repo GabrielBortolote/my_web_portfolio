@@ -13,7 +13,7 @@ export default async function Page({ params: { lang } }) {
   const dict = await getDictionary(lang)
   return <>
     <StartView dict={dict}/>
-    {/* <WhatIveDoneView dict={dict}/> */}
+    <WhatIveDoneView dict={dict}/>
     <AboutView dict={dict} lang={lang}/>
   </>
 }
