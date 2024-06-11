@@ -4,7 +4,7 @@ export default function GradientBorders({children, size, detail, detailSize}){
 
     <div className={`
       absolute bottom-0
-      w-full
+      w-3/4
       bg-gradient-to-r from-softYellow to-transparent
     `}
     style={{
@@ -13,7 +13,7 @@ export default function GradientBorders({children, size, detail, detailSize}){
 
     <div className={`
       absolute bottom-0 left-0
-      h-full
+      h-1/2
       bg-gradient-to-t from-softYellow to-transparent
     `}
     style={{
