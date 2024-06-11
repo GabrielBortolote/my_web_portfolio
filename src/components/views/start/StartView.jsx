@@ -13,7 +13,7 @@ export default function StartView({dict}) {
     </NeonFlickAndPulseEffect>
   </TitleTag>
 
-  return <>
+  return <div className="relative w-full">
     <div className={`
       w-full
       h-screen
@@ -52,12 +52,12 @@ export default function StartView({dict}) {
       />
       <ASkyFullOfStars />
     </div>
-      <div className="
-      relative
-      -top-1
+    <div className="
+      absolute
+      -bottom-4
       w-full h-5
       bg-gradient-to-b from-neonPink to-transparent
       opacity-50
     "/>
-  </>
+  </div>
 }
