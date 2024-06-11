@@ -26,5 +26,25 @@
       "I have a complete and extensive CV, check it out yourself:"
     ]
   },
-  "downloadCV": "Download CV"
+  "downloadCV": "Download CV",
+  "whatIveDone": "What I've Done",
+  "portfolioItems": {
+    "bankApp": {
+      "title": "Modern Bank App",
+      "description": "A modern beautiful bank app design built using ReactJS."
+    },
+    "dataPipeline": {
+      "title": "Data Pipeline",
+      "description": "Handling data from several sources and producing analytics."
+    },
+    "mensClothesShop": {
+      "title": "Men's clothing store page",
+      "description": "A beautiful design built for a modern clothes shop."
+    },
+    "ticTacToe": {
+      "title": "Tic Tac Toe Game",
+      "description": "A simple game built using ReactJS."
+    }
+  },
+  "preview": "Preview"
 }

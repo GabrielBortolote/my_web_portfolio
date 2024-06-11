@@ -2,6 +2,7 @@ import Image from 'next/image'
 import myPicture from '@/static/myPicture.svg'
 import yellowStar from '@/static/yellowStar.svg'
 import GradientBorders from '@/components/visualEffects/GradientBorders'
+import Portfolio from './Porfolio'
 
 export default function WhatIveDoneView({dict}){
   return <div className="
@@ -13,10 +14,11 @@ export default function WhatIveDoneView({dict}){
       flex flex-col
       flex-1
       items-end
-      border-red
-      border-2
+      justify-end 
+      pr-12
+      pb-12
     ">
-      Porfolio
+      <Portfolio dict={dict} />
     </div>
     <div className="
       flex-1
@@ -25,6 +27,7 @@ export default function WhatIveDoneView({dict}){
     </div>
   </div>
 }
+
 
 function Picture(){
   const detail = <Image 
@@ -36,9 +39,6 @@ function Picture(){
     <Image 
       src={myPicture}
       alt='Gabriel B. Picture'
-      className=""
     />
   </GradientBorders>
-   
- 
 }
