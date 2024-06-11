@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import myPicture from '@/static/myPicture.svg'
+
 export default function WhatIveDoneView({dict}){
   return <div className="
     flex flex-row
@@ -15,10 +18,16 @@ export default function WhatIveDoneView({dict}){
     </div>
     <div className="
       flex-1
-      border-red
-      border-2
     ">
-      Picture
+      <Picture />
     </div>
   </div>
+}
+
+function Picture(){
+  return <Image 
+    src={myPicture}
+    alt='Gabriel B. Picture'
+    className=""
+  />
 }
