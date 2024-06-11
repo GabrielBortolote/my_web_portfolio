@@ -41,7 +41,7 @@ export default function Portfolio({dict}){
   return <div className="">
     <div className='
       font-yellowtail text-8xl text-right
-      pb-16
+      py-16
     '>
       {dict.whatIveDone}
     </div>

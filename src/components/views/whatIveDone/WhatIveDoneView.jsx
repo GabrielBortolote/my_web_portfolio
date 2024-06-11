@@ -6,7 +6,8 @@ import Portfolio from './Porfolio'
 
 export default function WhatIveDoneView({dict}){
   return <div className="
-    flex flex-row
+    hidden
+    xl:flex flex-row
     flex-wrap lg:flex-nowrap
     text-light
   ">
