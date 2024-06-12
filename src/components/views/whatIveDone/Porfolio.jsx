@@ -38,7 +38,7 @@ export default function Portfolio({dict}){
 
   const [selected, setSelected] = useState(0);
 
-  return <div className="">
+  return <>
     <div className='
       font-yellowtail text-8xl text-right
       py-16
@@ -46,20 +46,22 @@ export default function Portfolio({dict}){
       {dict.whatIveDone}
     </div>
     {items.map((item, index) => (
-      <Item
-        key={index}
-        isSelected={index==selected}
-        onClick={() => {
-          setSelected(index)
-        }}
-        dict={dict}
-        title={item.title}
-        description={item.description}
-        link={item.link}
-        image={item.image}
-      />
+      <div key={index} className='flex flex-col items-end'>
+        <Divisor index={index}/>
+        <Item
+          isSelected={index==selected}
+          onClick={() => {
+            setSelected(index)
+          }}
+          dict={dict}
+          title={item.title}
+          description={item.description}
+          link={item.link}
+          image={item.image}
+        />
+      </div>
     ))}
-  </div>
+  </>
 }
 
 function Item({dict, isSelected, onClick, title, description, link, image}){
@@ -67,7 +69,7 @@ function Item({dict, isSelected, onClick, title, description, link, image}){
     return <div className="
       flex flex-row
       justify-end
-      pb-16
+      py-8
     ">
       <div className="
         flex flex-col
@@ -76,7 +78,7 @@ function Item({dict, isSelected, onClick, title, description, link, image}){
         pb-8
         w-2/4
       ">
-        <Title className="tracking-wider">
+        <Title className="tracking-wider     font-bold">
           {title}
         </Title>
         <Description>
@@ -86,15 +88,15 @@ function Item({dict, isSelected, onClick, title, description, link, image}){
           {dict.preview}
         </Link>
       </div>
-      <Preview src={image} alt={title} />
+      <Preview src={image} alt={title} url={link}/>
     </div>
   }
   else{
     return <div onClick={onClick} className="
       flex flex-row
       justify-end
-      pb-16
       cursor-pointer
+      py-8
     ">
       <Title className="tracking-widest">
         {title}
@@ -106,7 +108,6 @@ function Item({dict, isSelected, onClick, title, description, link, image}){
 function Title({children, className}){
   return <h3 className={`
     text-2xl
-    font-bold
     pb-4
     text-right
     ${className}
@@ -124,8 +125,8 @@ function Description({children}){
   </p>
 }
 
-function Preview({src, alt}){
-  return <div className="
+function Preview({src, alt, url}){
+  return <a href={url} className="
     justify-self-center
     self-center
     w-48 h-48
@@ -137,7 +138,7 @@ function Preview({src, alt}){
       src={src}
       alt={alt}
     />
-  </div>
+  </a>
 }
 
 function Link({children, url}){
@@ -151,4 +152,26 @@ function Link({children, url}){
     </div>
     {children}
   </a>
+}
+
+function Divisor({index}){
+  if (index != 0){
+    return <div className='
+      flex flex-row
+      justify-end
+      w-full h-[2px]
+      rounded
+      bg-gradient-to-l from-light to-transparent
+    '>
+      <div className='
+        h-full
+        -translate-y-1/2
+        rounded-full
+        bg-light
+      '/>
+    </div>
+  }
+  else{
+    return <></>
+  }
 }
