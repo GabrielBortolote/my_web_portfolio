@@ -7,14 +7,15 @@ import Portfolio from './Porfolio'
 export default function WhatIveDoneView({dict}){
   return <div className="
     flex flex-row
-    flex-wrap lg:flex-nowrap
+    justify-end
+    flex-wrap-reverse lg:flex-nowrap
     text-light
   ">
     <div className="
       flex flex-col
       items-end justify-end 
-      px-12
-      pb-12
+      px-4 sm:px-12
+      lg:pb-12
       flex-grow-0
       w-auto
     ">
