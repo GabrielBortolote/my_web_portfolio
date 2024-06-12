@@ -6,24 +6,24 @@ import Portfolio from './Porfolio'
 
 export default function WhatIveDoneView({dict}){
   return <div className="
-    hidden
-    xl:flex flex-row
-    flex-wrap lg:flex-nowrap
+    flex flex-row
+    justify-end
+    flex-wrap-reverse lg:flex-nowrap
     text-light
   ">
     <div className="
       flex flex-col
-      flex-1
-      items-end
-      justify-end 
-      pr-12
-      pb-12
+      items-end justify-end 
+      px-4 sm:px-12
+      lg:pb-12
+      flex-grow-0
+      w-auto
     ">
       <Portfolio dict={dict} />
     </div>
-    <div className="
-      flex-1
-    ">
+    <div className='
+      flex-grow-0
+    '>
       <Picture />
     </div>
   </div>
@@ -37,9 +37,9 @@ function Picture(){
   />
 
   return <GradientBorders size={4} detail={detail} detailSize={24}>
-    <Image 
-      src={myPicture}
-      alt='Gabriel B. Picture'
-    />
-  </GradientBorders>
+      <Image 
+        src={myPicture}
+        alt='Gabriel B. Picture'
+      />
+    </GradientBorders>
 }
