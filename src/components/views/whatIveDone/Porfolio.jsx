@@ -40,13 +40,15 @@ export default function Portfolio({dict}){
 
   return <>
     <div className='
-      font-yellowtail text-8xl text-right
-      py-16
+      font-yellowtail
+      text-6xl 2xl:text-8xl
+      text-right
+      py-8 2xl:py-16
     '>
       {dict.whatIveDone}
     </div>
     {items.map((item, index) => (
-      <div key={index} className='flex flex-col items-end'>
+      <>
         <Divisor index={index}/>
         <Item
           isSelected={index==selected}
@@ -59,7 +61,7 @@ export default function Portfolio({dict}){
           link={item.link}
           image={item.image}
         />
-      </div>
+      </>
     ))}
   </>
 }
@@ -67,7 +69,7 @@ export default function Portfolio({dict}){
 function Item({dict, isSelected, onClick, title, description, link, image}){
   if(isSelected){
     return <div className="
-      flex flex-row
+      flex flex-row self-end
       justify-end
       py-8
     ">
@@ -75,10 +77,9 @@ function Item({dict, isSelected, onClick, title, description, link, image}){
         flex flex-col
         justify-center items-end
         pr-8
-        pb-8
-        w-2/4
+        w-52 2xl:w-96
       ">
-        <Title className="tracking-wider     font-bold">
+        <Title className="tracking-wider font-bold">
           {title}
         </Title>
         <Description>
@@ -107,7 +108,7 @@ function Item({dict, isSelected, onClick, title, description, link, image}){
 
 function Title({children, className}){
   return <h3 className={`
-    text-2xl
+    text-xl 2xl:text-2xl
     pb-4
     text-right
     ${className}
@@ -118,7 +119,7 @@ function Title({children, className}){
 
 function Description({children}){
   return <p className="
-    text-xl
+    text-md 2xl:text-xl
     text-right
   ">
     {children}
@@ -129,7 +130,8 @@ function Preview({src, alt, url}){
   return <a href={url} className="
     justify-self-center
     self-center
-    w-48 h-48
+    w-36 2xl:w-48
+    h-36 2xl:h-48
     border-softYellow
     border-[1px] border-dashed
     rounded-full
@@ -145,9 +147,14 @@ function Link({children, url}){
   return <a href={url} className='
     flex flex-row
     text-softYellow font-bold
+    text-sm 2xl:text-md
     pt-4
   '>
-    <div className='w-6 h-6 mr-2'>
+    <div className='
+      w-4 2xl:w-6
+      h-4 2xl:h-6
+      mr-2
+    '>
       <Image src={LinkImage} alt="Follow the link" />
     </div>
     {children}
