@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import LinkImage from '@/static/Link.svg'
+import Image from 'next/image';
+import LinkImage from '@/static/Link.svg';
 
 export default function PortfolioItem({dict, isSelected, onClick, title, description, link, image}){
   if(isSelected){

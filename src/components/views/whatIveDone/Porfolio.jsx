@@ -1,14 +1,20 @@
 'use client'
 
-import { useState } from 'react'
-import ModernBankApp from '@/static/ModernBankApp.svg'
-import DataPipeline from '@/static/DataPipeline.svg'
-import MensClothesStore from '@/static/MensClothesStore.svg'
-import TicTacToeImage from '@/static/TicTacToeImage.svg'
-import PortfolioItem from './PortfolioItem'
+import { useState } from 'react';
+import ModernBankApp from '@/static/ModernBankApp.svg';
+import DataPipeline from '@/static/DataPipeline.svg';
+import TicTacToeImage from '@/static/TicTacToeImage.svg';
+import EmilyImage from '@/static/EmilyInPelves.png';
+import PortfolioItem from './PortfolioItem';
 
 export default function Portfolio({dict}){
   const items = [
+    {
+      title: dict.portfolioItems.emilyInPelves.title,
+      description: dict.portfolioItems.emilyInPelves.description,
+      image: EmilyImage,
+      link: 'https://www.emilyinpelves.com',
+    },
     {
       title: dict.portfolioItems.bankApp.title,
       description: dict.portfolioItems.bankApp.description,
@@ -20,12 +26,6 @@ export default function Portfolio({dict}){
       description: dict.portfolioItems.dataPipeline.description,
       image: DataPipeline,
       link: 'https://github.com/GabrielBortolote/data-pipeline-with-python',
-    },
-    {
-      title: dict.portfolioItems.mensClothesShop.title,
-      description: dict.portfolioItems.mensClothesShop.description,
-      image: MensClothesStore,
-      link: 'https://www.figma.com/proto/MfTtOPp8UNyGfGs1lURrld/Abisai-Landing-Page?node-id=147-365',
     },
     {
       title: dict.portfolioItems.ticTacToe.title,
