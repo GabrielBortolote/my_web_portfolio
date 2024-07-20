@@ -1,8 +1,8 @@
-import Image from 'next/image'
-import myPicture from '@/static/myPicture.svg'
-import yellowStar from '@/static/yellowStar.svg'
-import GradientBorders from '@/components/visualEffects/GradientBorders'
-import Portfolio from './Porfolio'
+import Image from 'next/image';
+import myPicture from '@/static/myPicture.png';
+import yellowStar from '@/static/yellowStar.svg';
+import GradientBorders from '@/components/visualEffects/GradientBorders';
+import Portfolio from './Porfolio';
 
 export default function WhatIveDoneView({dict}){
   return <div className="
@@ -29,7 +29,6 @@ export default function WhatIveDoneView({dict}){
   </div>
 }
 
-
 function Picture(){
   const detail = <Image 
     src={yellowStar}
@@ -40,6 +39,7 @@ function Picture(){
       <Image 
         src={myPicture}
         alt='Gabriel B. Picture'
+        quality={75}
       />
     </GradientBorders>
 }
